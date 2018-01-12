@@ -1,5 +1,6 @@
-<form method="get" action="/result">
-	<input type="number" name="num1"/> + <input type="number" name="num2"/>
-	<input type="submit"/>
-
-</form>
+<% @posts.each do |post| %>
+title: <%=post.title%> <a href="/modify/<%=post.id%>"> Edit </a> <br>
+content: <%=post.content%> <a href="/delete/<%=post.id%>"> Delete </a> <hr>
+<% end %>
+<br>
+<a href="/write"> go to writiting </a>

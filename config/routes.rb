@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
- get '/' => 'home#index'
- post 'result' => 'home#result'
+	get "index" => "home#index"
+	get "write" => "home#write"
+	post '/create' => "home#create"
 
- get 'plus/:num1/:num2' => 'home#plus'
+	get '/modify/:post_id' => 'home#modify'
+	post '/update/:post_id' => 'home#update'
+	get '/delete/:post_id' => 'home#delete'
 end
